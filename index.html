@@ -23,18 +23,28 @@
 }
 
 /* Side Menu */
+/* Side Menu - FIXED POSITION */
 .menu{
   position:fixed;
-  top:120px;
-  right:-260px;
+  top:70px;                 /* directly below header */
+  left:10px;                /* aligned with hamburger */
   width:260px;
-  height:100%;
+  max-height:calc(100vh - 90px);
   background:#020617;
   padding:20px;
-  transition:0.4s;
+  overflow-y:auto;          /* ENABLE SCROLL */
+  transform:scaleY(0);      /* CLOSED STATE */
+  transform-origin:top;
+  transition:0.3s ease;
   z-index:999;
+  border-radius:12px;
 }
-.menu.open{right:0}
+
+/* Open State */
+.menu.open{
+  transform:scaleY(1);
+}
+
 .menu a{
   display:block;
   color:#fff;
