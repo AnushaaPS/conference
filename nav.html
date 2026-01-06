@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>INNOVATE 2026 – International Conference</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* Hamburger Menu */
+.menu-btn{
+  width:32px;
+  cursor:pointer;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.menu-btn span{
+  height:4px;
+  background:#fff;
+  border-radius:3px;
+}
+
+/* Side Menu */
+.menu{
+  position:fixed;
+  top:120px;
+  right:-260px;
+  width:260px;
+  height:100%;
+  background:#020617;
+  padding:20px;
+  transition:0.4s;
+  z-index:999;
+}
+.menu.open{right:0}
+.menu a{
+  display:block;
+  color:#fff;
+  text-decoration:none;
+  padding:12px 0;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+html{scroll-behavior:smooth}
+
+/* ===== HEADER ===== */
+header{
+  position:fixed;top:0;width:100%;
+  background:#020617;
+  z-index:1000;
+}
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 20px;
+}
+nav img{
+  width:60px;
+
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ===== SCROLL INFO ===== */
+.scroll-info{
+  background:linear-gradient(90deg,#22c55e,#38bdf8,#a855f7);
+  color:#000;font-weight:600;
+  overflow:hidden;
+}
+.scroll-info span{
+  display:inline-block;
+  padding-left:100%;
+  white-space:nowrap;
+  animation:scroll 20s linear infinite;
+}
+@keyframes scroll{to{transform:translateX(-100%)}}
+
+/* ===== BODY ===== */
+body{
+  padding-top:120px;
+  background:linear-gradient(120deg,#020617,#1e3a8a);
+  color:#fff;
+}
+
+/* ===== SECTIONS ===== */
+section{padding:80px 16px}
+.container{max-width:1200px;margin:auto}
+h2{text-align:center;margin-bottom:20px}
+
+/* ===== HERO ===== */
+.hero{text-align:center}
+.hero h1{
+  font-size:42px;
+  background:linear-gradient(90deg,#38bdf8,#22c55e);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* ===== GRID & CARD ===== */
+.grid{
+  display:grid;
+  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+.card{
+  background:rgba(255,255,255,.08);
+  padding:20px;
+  border-radius:16px;
+}
+.card img{
+  width:100%;
+  border-radius:14px;
+  margin-bottom:10px;
+}
+
+/* ===== SLIDER ===== */
+.slider img{
+  width:100%;
+  border-radius:16px;
+}
+
+/* ===== FORM ===== */
+form input,form select{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border-radius:10px;
+  border:none;
+}
+form button{
+  padding:14px 30px;
+  border:none;
+  border-radius:30px;
+  background:#22c55e;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* ===== CONTACT ===== */
+.contact-list{
+  list-style:none;
+  display:grid;
+  gap:12px;
+  max-width:400px;
+  margin:auto;
+}
+.contact-list li{
+  background:rgba(255,255,255,.1);
+  padding:14px;
+  border-radius:14px;
+  text-align:center;
+}
+
+/* ===== WHATSAPP ===== */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  width:55px;height:55px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  text-decoration:none;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#020617;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+    <!-- Hamburger Menu Button -->
+<div class="menu-btn" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<strong>INNOVATE 2026</strong>
+</nav>
+
+<div class="scroll-info">
+<span>
+📢 Paper Submission Deadline: 15 March 2026 | Conference Date: 24 April 2026 |
+Publication: Scopus / Springer Lecture Notes
+</span>
+</div>
+</header>
+
+<!-- Side Menu -->
+<div class="menu" id="menu">
+  <a href="#home" onclick="toggleMenu()">Home</a>
+  <a href="#institution" onclick="toggleMenu()">About Institution</a>
+  <a href="#conference" onclick="toggleMenu()">About Conference</a>
+  <a href="#keynote" onclick="toggleMenu()">Keynote Speakers</a>
+  <a href="#tracks" onclick="toggleMenu()">Conference Tracks</a>
+  <a href="#committee" onclick="toggleMenu()">Committee</a>
+  <a href="#submit" onclick="toggleMenu()">Paper Submission</a>
+  <a href="images/brochure.pdf" download>📄 Download Brochure</a>
+</div>
+
+<a class="whatsapp" href="https://wa.me/919788569886" target="_blank">💬</a>
+
+<!-- HERO -->
+<section id="home" class="hero">
+<h2><b>Kamaraj College of Engineering and Technology<br><center>(An Autonomous Institution)</center></b></h2>
+<p>Organizes</p><br>
+<h1>International Conference on AI-Driven Intelligent Systems<br>and Sustainable Engineering Technologies</h1>
+<br><p>24 April 2026 | Hybrid Mode</p>
+</section>
+
+<!-- ABOUT INSTITUTION -->
+<section>
+<div class="container">
+<h2>About the Institution</h2>
+<p>Our college was established in the year 1998. 
+It is promoted and supported by Virudhunagar Hindu Nadar's Devasthanam, various Hindu Nadar's Mahamai Tharappus in Virudhunagar and other places and educational institutions of Virudhunagar. 
+Our college is ideally located on the home land of Karmaveerar "Bharat Ratna" K. Kamaraj and our institution is one of the Virudhunagar's most recognizable landmark. 
+Presently, Our College spans to 47.92 acres of land. 
+This Institution has been approved by All India Council for Technical Education (AICTE), New Delhi and affiliated to Anna University. 
+The college offers 9 UG and 5 PG programmes. ECE, EEE, CSE, IT, Mechanical, Mechatronics, Bio-Technology Departments are accredited by National Board of Accreditation, New Delhi. 
+The College was conferred Autonomous status for the period of 10 years from 2020-2030 by University Grants Commission, New Delhi. 
+Our institution is accredited by NAAC with "A" grade. Our institution is selected in a promising under ATAL ranking of Institutions in Innovation Achievement (ARIIA) ranking under private institution by Ministry of Education, Government of India. 
+Our college is awarded as the Best Engineering College in South India for Industry Interface by Centre for Research and Education Growth (CEGR), New Delhi. 
+In Career 360 Magazine Survey, our college got AAA ranking.</p><br><br>
+<iframe src="https://www.google.com/maps?q=Kamaraj%20College%20of%20Engineering%20and%20Technology&output=embed"
+width="100%" height="300" style="border:0;border-radius:16px"></iframe>
+</div>
+</section>
+
+<!-- ABOUT CONFERENCE -->
+<section>
+<div class="container">
+<h2>About the Conference</h2>
+<p>
+INNOVATE 2026 brings together researchers, academicians and industry professionals to present AI-driven intelligent systems and sustainable engineering technologies.
+The International Conference on AI-Driven Intelligent Systems and Sustainable Engineering Technologies brings together researchers, academicians, industry professionals, and innovators from around the world. 
+The conference serves as a premier platform to present and discuss recent advancements in artificial intelligence–enabled engineering solutions. It focuses on the integration of intelligent systems with sustainable and green engineering practices. 
+The event encourages interdisciplinary research across Electrical, Electronics, Communication and Mechanical Engineering domains.
+</p>
+</div>
+</section>
+
+<!-- KEYNOTE -->
+<section>
+<div class="container">
+<h2>Keynote Speakers</h2>
+<div class="grid">
+<div class="card"><img src="images/keynote1.jpg"><center>Dr. T. P. D. Rajan<br>CSIR-NIIST, India</center></div>
+<div class="card"><img src="images/keynote2.jpeg"><center>Dr. Reshmy Krishnan<br>Muscat College</center></div>
+<div class="card"><img src="images/keynote3.jpg"><center>Ts. Dr. Muhammad Ammirrul Atiqi<br>UKM, Malaysia</center></div>
+<div class="card"><img src="images/keynote4.jpg"><center>Prof. Dr. Margarita Perez<br>Spain</center></div>
+</div>
+</div>
+</section>
+
+<!-- TRACKS -->
+<section>
+<div class="container">
+<h2>Conference Tracks</h2>
+<div class="grid">
+<div class="card"><img src="images/track1.jpg"><center>Intelligent Electronics & Communication Systems</center></div>
+<div class="card"><img src="images/track2.avif"><center>AI-Driven Electrical & Power Engineering</center></div>
+<div class="card"><img src="images/track3.jpg"><center>AI in Control Systems & Robotics</center></div>
+<div class="card"><img src="images/track4.avif"><center>AI-Enabled Mechanical & Manufacturing Systems</center></div>
+<div class="card"><img src="images/track5.jpg"><center>Sustainable Engineering & Green Technologies</center></div>
+</div>
+</div>
+</section>
+
+<!-- COMMITTEE -->
+<section>
+<div class="container">
+<h2>Organizing Committee</h2>
+<div class="grid">
+<div class="card"><center>Dr. R. Suresh Babu</center></div>
+<div class="card"><center>Dr. D. Prince Winston</center></div>
+<div class="card"><center>Dr. S. Thanga Kasi Rajan</center></div>
+</div>
+
+<h2 style="margin-top:40px">Technical Committee</h2>
+<div class="grid">
+<div class="card"><center>Dr. Anand Anbalagan</center></div>
+<div class="card"><center>Tomonobu Senjyu</center></div>
+<div class="card"><center>Dr. Akhtar Kalam</center></div>
+<div class="card"><center>Dr. Nnamdi Nwulu</center></div>
+</div>
+</div>
+</section>
+
+<!-- SUBMISSION FORM -->
+<section>
+<div class="container">
+<h2>Paper Submission</h2>
+<form id="paperForm">
+<input name="author" placeholder="Corresponding Author Name" required>
+<select name="country" id="country" required></select>
+<select name="track" required>
+<option>Track 1 – Intelligent Electronics</option>
+<option>Track 2 – AI Power Engineering</option>
+<option>Track 3 – Robotics & Control</option>
+<option>Track 4 – Mechanical Systems</option>
+<option>Track 5 – Sustainable Engineering</option>
+</select>
+<input name="title" placeholder="Paper Title" required>
+<input name="institution" placeholder="Institution Name" required>
+<input type="email" name="email" placeholder="Email ID" required>
+<input name="whatsapp" placeholder="WhatsApp Number" required>
+<input type="file" name="paper" accept=".doc,.docx" required>
+<button>Submit Paper</button>
+</form>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section>
+<div class="container">
+<h2>Contact</h2>
+<ul class="contact-list">
+<li>📍 Kamaraj College of Engineering and Technology</li>
+<li>📧 innovate@kamarajcollege.edu.in</li>
+<li>📞 +91 97885 69886</li>
+</ul>
+</div>
+</section>
+
+<footer>© 2026 INNOVATE Conference</footer>
+
+<script>
+/* SLIDESHOW */
+const slides=["college1.jpg","college2.jpg","college3.jpg"];
+let i=0;
+setInterval(()=>{
+ document.getElementById("collegeSlide").src="images/"+slides[i++%slides.length];
+},3000);
+
+/* COUNTRY LIST */
+const c=document.getElementById("country");
+const dn = new Intl.DisplayNames(["en"], { type: "region" });
+for(let a=65;a<=90;a++){
+ for(let b=65;b<=90;b++){
+  try{
+   const code=String.fromCharCode(a)+String.fromCharCode(b);
+   const name=dn.of(code);
+   if(name && !name.includes(code)) c.innerHTML+=`<option>${name}</option>`;
+  }catch(e){}
+ }
+}
+
+/* PAPER ID */
+function genID(){return "INN-2026-"+Math.floor(1000+Math.random()*9000)}
+
+const SCRIPT_URL="https://script.google.com/macros/s/AKfycbzZz4cXhos33qvVYhc9NUIjonYEWjS4a2Ukx5qEP-CwDx8brVCEotr2qk53_tMVJh4OVg/exec";
+
+document.getElementById("paperForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const f=e.target,file=f.paper.files[0];
+ const pid=genID();
+ const r=new FileReader();
+ r.onload=()=>{
+ fetch(SCRIPT_URL,{
+  method:"POST",
+  body:JSON.stringify({
+   paperID:pid,
+   author:f.author.value,
+   country:f.country.value,
+   track:f.track.value,
+   title:f.title.value,
+   institution:f.institution.value,
+   email:f.email.value,
+   whatsapp:f.whatsapp.value,
+   fileName:file.name,
+   mimeType:file.type,
+   file:r.result.split(",")[1]
+  })
+ }).then(()=>alert("Submitted Successfully\nPaper ID: "+pid));
+ };
+ r.readAsDataURL(file);
+});
+</script>
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("open");
+}
+</script>
+
+</body>
+</html>
