@@ -176,6 +176,79 @@ footer{
   padding:20px;
   background:#020617;
 }
+
+/* IMPORTANT DATES TIMELINE */
+.timeline{
+  position:relative;
+  margin:40px auto;
+  max-width:700px;
+  padding-left:20px;
+}
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:8px;
+  top:0;
+  width:3px;
+  height:100%;
+  background:linear-gradient(#38bdf8,#22c55e);
+}
+.timeline-item{
+  margin-bottom:30px;
+  padding-left:30px;
+}
+.timeline-dot{
+  position:absolute;
+  left:0;
+  width:18px;
+  height:18px;
+  background:#22c55e;
+  border-radius:50%;
+  box-shadow:0 0 10px #22c55e;
+}
+.timeline-item h4{
+  margin-bottom:6px;
+}
+.timeline-item span{
+  color:#38bdf8;
+  font-weight:600;
+}
+
+/* CONFERENCE FEE TABLE */
+.fee-table{
+  width:100%;
+  max-width:700px;
+  margin:30px auto;
+  border-collapse:collapse;
+  overflow:hidden;
+  border-radius:12px;
+}
+.fee-table th,
+.fee-table td{
+  padding:14px;
+  text-align:center;
+}
+.fee-table th{
+  background:linear-gradient(90deg,#22c55e,#38bdf8);
+  color:#000;
+}
+.fee-table tr{
+  background:rgba(255,255,255,0.08);
+}
+.fee-table tr:nth-child(even){
+  background:rgba(255,255,255,0.12);
+}
+.fee-note{
+  text-align:center;
+  margin-top:15px;
+  font-size:14px;
+  color:#ddd;
+}
+
+p {
+            text-align: justify; /* Aligns text to both left and right edges */
+            text-justify: inter-word; /* Improves spacing between words */
+        }
 </style>
 </head>
 
@@ -209,6 +282,10 @@ Publication: Scopus / Springer Lecture Notes
   <a href="#keynote" onclick="toggleMenu()">Keynote Speakers</a>
   <a href="#tracks" onclick="toggleMenu()">Conference Tracks</a>
   <a href="#committee" onclick="toggleMenu()">Committee</a>
+  <a href="#dates" onclick="toggleMenu()">Important Dates</a>
+<a href="#fee" onclick="toggleMenu()">Conference Fee</a>
+<a href="#guidelines" onclick="toggleMenu()">Guidelines</a>
+<a href="#publication" onclick="toggleMenu()">Publication</a>
   <a href="#submit" onclick="toggleMenu()">Paper Submission</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
   <a href="images/brochure.pdf" download>📄 Download Brochure</a>
@@ -219,9 +296,9 @@ Publication: Scopus / Springer Lecture Notes
 <!-- HERO -->
 <section id="home" class="hero">
 <h2><b>Kamaraj College of Engineering and Technology<br><center>(An Autonomous Institution)</center></b></h2>
-<p>Organizes</p><br>
+Organizes<br>
 <h1>International Conference on AI-Driven Intelligent Systems<br>and Sustainable Engineering Technologies</h1>
-<br><p>24 April 2026 | Hybrid Mode</p>
+<br>24 April 2026 | Hybrid Mode
 </section>
 
 <!-- ABOUT INSTITUTION -->
@@ -300,6 +377,106 @@ The event encourages interdisciplinary research across Electrical, Electronics, 
 <div class="card"><center>Dr. Akhtar Kalam</center></div>
 <div class="card"><center>Dr. Nnamdi Nwulu</center></div>
 </div>
+</div>
+</section>
+
+<!-- IMPORTANT DATES -->
+<section id="dates">
+<div class="container">
+<h2>Important Dates</h2>
+
+<div class="timeline">
+
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <h4>Full Paper Submission</h4>
+    <span>March 15, 2026</span>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <h4>Paper Acceptance Notification</h4>
+    <span>March 30, 2026</span>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <h4>Registration Last Date</h4>
+    <span>April 12, 2026</span>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <h4>Conference Date (Hybrid Mode)</h4>
+    <span>April 24, 2026</span>
+  </div>
+
+</div>
+</div>
+</section>
+
+<!-- CONFERENCE FEE -->
+<section id="fee">
+<div class="container">
+<h2>Conference Fee</h2>
+
+<table class="fee-table">
+  <tr>
+    <th>Category</th>
+    <th>Fee</th>
+  </tr>
+  <tr>
+    <td>Students / Research Scholars / Faculty / Industry Professionals</td>
+    <td><b>₹ 1000</b></td>
+  </tr>
+  <tr>
+    <td>Listeners</td>
+    <td><b>₹ 500</b></td>
+  </tr>
+</table>
+
+<p class="fee-note">
+Additional <b>₹ 500</b> will be charged for extra authors participating in
+<b>Physical Mode</b>.
+</p>
+
+</div>
+</section>
+
+
+<!-- GUIDELINES -->
+<section id="guidelines">
+<div class="container">
+<h2>Author Guidelines</h2>
+
+<div class="card">
+<ul style="line-height:1.8; padding-left:20px">
+  <li>All submitted papers must be <b>original, unpublished</b> and not under consideration elsewhere.</li>
+  <li>Manuscripts must be prepared strictly in accordance with the
+      <b>IEEE two-column conference format</b>.</li>
+  <li>The length of the manuscript should <b>not exceed six pages</b>
+      including references.</li>
+  <li>Papers must comply with plagiarism standards with a
+      <b>similarity index below 10%</b>.</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- PUBLICATION -->
+<section id="publication">
+<div class="container">
+<h2>Publication</h2>
+
+<div class="card">
+<p>
+All <b>accepted and presented papers</b> will be published in
+<b>Scopus indexed / Springer Lecture Notes</b>
+with additional publication charges as per the willingness of the authors.
+</p>
+</div>
+
 </div>
 </section>
 
